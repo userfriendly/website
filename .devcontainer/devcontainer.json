@@ -3,7 +3,15 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
 {
 	"name": "Node.js",
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:16-bullseye",
+	// "image": "mcr.microsoft.com/devcontainers/javascript-node:16-bullseye",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {
+			// Options
+			"NODE_VERSION": "lts/*"
+		}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
